@@ -1,26 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Comparação de Arquivos CSV</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparação de Arquivos CSV</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+
 <body>
-<div class="container">
+  <div class="container">
     <h1>Comparação de Arquivos CSV</h1>
     <div class="file-upload">
-        <label for="file1" class="file-label">Selecione o Arquivo CSV 1:</label>
-        <input type="file" id="file1" accept=".csv">
+      <label for="file1" class="file-label">Selecione o Arquivo CSV 1:</label>
+      <input type="file" id="file1" accept=".csv">
     </div>
     <div class="file-upload">
-        <label for="file2" class="file-label">Selecione o Arquivo CSV 2:</label>
-        <input type="file" id="file2" accept=".csv">
+      <label for="file2" class="file-label">Selecione o Arquivo CSV 2:</label>
+      <input type="file" id="file2" accept=".csv">
     </div>
-    <button title="O arquivo será salvo na pasta resource/csv. Caso o arquivo já exista o mesmo será substituido pelos novos" id="uploadBtn">Upload de Arquivos</button>
-    <button onclick="compareFiles()"><a target="_blank" href="http://localhost/api/compare/git">Comparar Arquivos usando Git</a></button>
-    <textarea id="result" placeholder="Resultado da comparação" ></textarea>
-</div>
-<script src="script.js"></script>
+    <button 
+      class="upload"
+      title="O arquivo será salvo na pasta resource/csv. Caso o arquivo já exista o mesmo será substituido pelos novos"
+      id="uploadBtn">
+      <b>Upload de Arquivos</b>
+      <span class="material-symbols-outlined">upload_file</span>
+    </button><br><br><br>
+    <button title="Comparar utilizando a ferramenta git. Capturando e colorindo a saída.">
+      <a target="_blank" href="http://localhost/api/compare/git">Comparar Arquivos usando Git  </a>
+      <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" width="20" alt="git">
+    </button>
+    <button title="Comparação linha a linha">
+      <a target="_blank" href="http://localhost/api/compare/simple">Comparação simplificada</a>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Simple_Shoes_logo.png" width="40" alt="simple">
+    </button>
+    <button title="Comparação com a metodologia LCS ( longest common subsequence )">
+      <a target="_blank" href="http://localhost/api/compare/lcs">Comparação com a metodologia LCS</a>
+      <img src="https://lcs.com.br/wp-content/uploads/2021/08/cropped-logo.png" width="40" alt="lcs">
+    </button>
+    
+  </div>
+  <script src="script.js"></script>
 </body>
+
 </html>

@@ -11,7 +11,7 @@ document.getElementById('uploadBtn').addEventListener('click', function() {
     })
     .then(response => response.text())
     .then(result => {
-        document.getElementById('result').value = result;
+        alert(result);
     })
     .catch(error => console.error('Error:', error));
 });
