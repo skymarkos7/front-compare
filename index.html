@@ -17,10 +17,9 @@
         <label for="file2" class="file-label">Selecione o Arquivo CSV 2:</label>
         <input type="file" id="file2" accept=".csv">
     </div>
-    <button id="uploadBtn">Upload de Arquivos</button>
-    <button onclick="compareFiles()">Comparar Arquivos</button>
+    <button title="O arquivo será salvo na pasta resource/csv. Caso o arquivo já exista o mesmo será substituido pelos novos" id="uploadBtn">Upload de Arquivos</button>
+    <button onclick="compareFiles()"><a target="_blank" href="http://localhost/api/compare/git">Comparar Arquivos usando Git</a></button>
     <textarea id="result" placeholder="Resultado da comparação" ></textarea>
-    <p id="result">ss</p>
 </div>
 <script src="script.js"></script>
 </body>

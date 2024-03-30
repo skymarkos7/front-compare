@@ -15,8 +15,3 @@ document.getElementById('uploadBtn').addEventListener('click', function() {
     })
     .catch(error => console.error('Error:', error));
 });
-
-
-
-
-
